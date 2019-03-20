@@ -3,45 +3,51 @@ package com.equipo2.ServicioMeteorologia.entity;
 public class Bbox {
 
 	
-	private long east;
-	private long south;
-	private long north;
-	private long west;
+	private float east;
+	private float south;
+	private float north;
+	private float west;
 	
-	
-	
-	public Bbox(long east, long south, long north, long west) {
+	public Bbox() {
+	}
+
+	public Bbox(float east, float south, float north, float west) {
 		this.east = east;
 		this.south = south;
 		this.north = north;
 		this.west = west;
 	}
-	
-	public long getEast() {
+
+	public float getEast() {
 		return east;
 	}
-	public void setEast(long east) {
+
+	public void setEast(float east) {
 		this.east = east;
 	}
-	public long getSouth() {
+
+	public float getSouth() {
 		return south;
 	}
-	public void setSouth(long south) {
+
+	public void setSouth(float south) {
 		this.south = south;
 	}
-	public long getNorth() {
+
+	public float getNorth() {
 		return north;
 	}
-	public void setNorth(long north) {
+
+	public void setNorth(float north) {
 		this.north = north;
 	}
-	public long getWest() {
+
+	public float getWest() {
 		return west;
 	}
-	public void setWest(long west) {
+
+	public void setWest(float west) {
 		this.west = west;
 	}
-	
-	
 	
 }
