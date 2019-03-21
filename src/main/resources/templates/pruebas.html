@@ -58,6 +58,23 @@
 		<input type="text" name="ciudad" />
 		<input type="submit" value="Buscar" />
 	</form>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>Temperatura</th>
+				<th>Humedad</th>
+				<th>Velocidad</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th th:text="${meteodata.mediaTemperatura}"></th>
+				<th th:text="${meteodata.mediaHumedad}"></th>
+				<th th:text="${meteodata.mediaVelocidadViento}"></th>
+			</tr>
+		</tbody>
+	</table>
 
 </body>
 </html>

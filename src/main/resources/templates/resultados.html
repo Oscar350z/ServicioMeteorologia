@@ -8,7 +8,9 @@
 </head>
 <body>
 
-<h2><span th:text="${ciudad}"></span></h2>
+<h2><span th:text="${meteodata.mediaTemperatura}"></span></h2>
+<h2><span th:text="${meteodata.mediaHumedad}"></span></h2>
+<h2><span th:text="${meteodata.mediaVelocidadViento}"></span></h2>
 
 <a th:href="@{/pruebas}" href="pruebas.html">Menú principal</a>
 

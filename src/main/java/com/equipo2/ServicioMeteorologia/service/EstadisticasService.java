@@ -4,6 +4,6 @@ import com.equipo2.ServicioMeteorologia.model.MeteoData;
 
 public interface EstadisticasService {
 	
-	MeteoData mediaTemperatura();
+	MeteoData calculaMedia(String nombreCiudad);
 	
 }
