@@ -25,22 +25,10 @@ public class IndexController2 {
 	@Autowired
 	private EstadisticasService estadisticasService;
 
-	@GetMapping ("/pruebas")
+	@GetMapping ("/")
 	public String index(Model model) {
 		
-		
-		Bbox bbox = new Bbox(44.1f, -9.9f, -22.4f, 55.2f);
-		
-		System.out.println("Antes de recuperar lista de observaciones");
-		
-		
-	
-		MeteoData meteodata = estadisticasService.calculaMedia("Madrid");
-		
-		
-		model.addAttribute("meteodata", meteodata);
-		
-		return "pruebas";
+		return "index";
 	}
 	
 	@PostMapping("/pruebas")

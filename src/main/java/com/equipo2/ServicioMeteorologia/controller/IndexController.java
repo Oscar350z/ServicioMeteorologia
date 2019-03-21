@@ -14,15 +14,15 @@ public class IndexController {
 	@Autowired
 	private GeonamesService geonameService;
 
-	@GetMapping ("/")
-	public String index(Model model) {
-		
-		
-//		Geonames g = geonameService.getAll("Madrid");
+//	@GetMapping ("/")
+//	public String index(Model model) {
 //		
-//		model.addAttribute("estacion", g.getAsciiName());
-		return "index";
-	}
+//		
+////		Geonames g = geonameService.getAll("Madrid");
+////		
+////		model.addAttribute("estacion", g.getAsciiName());
+//		return "index";
+//	}
 	
 	
 }

@@ -22,7 +22,9 @@ public class GeonamesRepositoryImpl implements GeonamesRepository{
 	@Override
 	public Geonames getFirstGeoname(String nombreCiudad) {
 		
-		return getAll(nombreCiudad).getGeonames().get(1);
+		return getAll(nombreCiudad).getGeonames().get(0);
+		
+		
 	}
 	
 }
