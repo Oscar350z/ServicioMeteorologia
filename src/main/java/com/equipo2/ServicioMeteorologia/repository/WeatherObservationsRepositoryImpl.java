@@ -12,7 +12,7 @@ public class WeatherObservationsRepositoryImpl implements WeatherObservationsRep
 	@Override
 	public TotalWeatherObservations findAll(Bbox bbox) {
 		
-		String url = "http://api.geonames.org/weatherJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&usern" + 
+		String url = "http://api.geonames.org/weatherJSON?north="+ bbox.getNorth() +"&south=" + bbox.getSouth() + "&east=" + bbox.getEast() +"&west=" + bbox.getWest() + "&usern" + 
 				"ame=ilgeonamessample";
 		
 		RestTemplate restTemplate = new RestTemplate();

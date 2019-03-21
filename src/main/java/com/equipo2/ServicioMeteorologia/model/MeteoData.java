@@ -4,12 +4,12 @@ public class MeteoData {
 	
 	private double mediaTemperatura;
 	private int mediaHumedad;
-	private int mediaVelocidadViento;
+	private double mediaVelocidadViento;
 	
 	public MeteoData() {
 	}
 
-	public MeteoData(double mediaTemperatura, int mediaHumedad, int mediaVelocidadViento) {
+	public MeteoData(double mediaTemperatura, int mediaHumedad, double mediaVelocidadViento) {
 		this.mediaTemperatura = mediaTemperatura;
 		this.mediaHumedad = mediaHumedad;
 		this.mediaVelocidadViento = mediaVelocidadViento;
@@ -31,11 +31,11 @@ public class MeteoData {
 		this.mediaHumedad = mediaHumedad;
 	}
 
-	public int getMediaVelocidadViento() {
+	public double getMediaVelocidadViento() {
 		return mediaVelocidadViento;
 	}
 
-	public void setMediaVelocidadViento(int mediaVelocidadViento) {
+	public void setMediaVelocidadViento(double mediaVelocidadViento) {
 		this.mediaVelocidadViento = mediaVelocidadViento;
 	}
 
