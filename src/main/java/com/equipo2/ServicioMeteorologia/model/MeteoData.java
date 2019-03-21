@@ -1,18 +1,35 @@
 package com.equipo2.ServicioMeteorologia.model;
 
+import java.util.List;
+
+import com.equipo2.ServicioMeteorologia.entity.WeatherObservations;
+
 public class MeteoData {
 	
+	private String ciudad;
 	private double mediaTemperatura;
 	private int mediaHumedad;
 	private double mediaVelocidadViento;
+	private List<WeatherObservations> listaEstaciones;
 	
 	public MeteoData() {
 	}
 
-	public MeteoData(double mediaTemperatura, int mediaHumedad, double mediaVelocidadViento) {
+	public MeteoData(String ciudad, double mediaTemperatura, int mediaHumedad, double mediaVelocidadViento,
+			List<WeatherObservations> listaEstaciones) {
+		this.ciudad = ciudad;
 		this.mediaTemperatura = mediaTemperatura;
 		this.mediaHumedad = mediaHumedad;
 		this.mediaVelocidadViento = mediaVelocidadViento;
+		this.listaEstaciones = listaEstaciones;
+	}
+
+	public String getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
 	}
 
 	public double getMediaTemperatura() {
@@ -39,4 +56,12 @@ public class MeteoData {
 		this.mediaVelocidadViento = mediaVelocidadViento;
 	}
 
+	public List<WeatherObservations> getListaEstaciones() {
+		return listaEstaciones;
+	}
+
+	public void setListaEstaciones(List<WeatherObservations> listaEstaciones) {
+		this.listaEstaciones = listaEstaciones;
+	}
+	
 }

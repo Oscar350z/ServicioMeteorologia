@@ -28,7 +28,6 @@ public class EstadisticaServiceImpl implements EstadisticasService {
 		double windSpeedAverage = 0;
 		
 		Geonames geonames = geonameService.getFirstGeonames(nombreCiudad);
-		
 		TotalWeatherObservations observations = weatherService.findAll(geonames.getBbox());
 		
 		for(WeatherObservations observation : observations.getWeatherObservations()) {
@@ -49,9 +48,11 @@ public class EstadisticaServiceImpl implements EstadisticasService {
 		}
 		
 		
+		meteoData.setCiudad(nombreCiudad);
 		meteoData.setMediaTemperatura(temperatureAverage);
 		meteoData.setMediaHumedad(humidityAverage);
 		meteoData.setMediaVelocidadViento(windSpeedAverage);
+		meteoData.setListaEstaciones(observations.getWeatherObservations());
 		
 		return meteoData;
 	}

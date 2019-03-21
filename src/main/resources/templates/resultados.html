@@ -8,9 +8,28 @@
 </head>
 <body>
 
-<h2><span th:text="${meteodata.mediaTemperatura}"></span></h2>
-<h2><span th:text="${meteodata.mediaHumedad}"></span></h2>
-<h2><span th:text="${meteodata.mediaVelocidadViento}"></span></h2>
+<table>
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Temperatura media</th>
+			<th>Humedad media</th>
+			<th>Velocidad viento media</th>
+			<th>Listado estaciones</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td th:text="${meteodata.ciudad}"></td>
+			<td th:text="${meteodata.mediaTemperatura}"></td>
+			<td th:text="${meteodata.mediaHumedad}"></td>
+			<td th:text="${meteodata.mediaVelocidadViento}"></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
 
 <a th:href="@{/}" href="index.html">Menú principal</a>
 
