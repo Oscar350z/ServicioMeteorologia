@@ -11,3 +11,19 @@
 	color: #363;
 	font-size: 25px;
 }
+#ciudad{
+	border-radius: 10px;
+	border-color:  green;
+}
+#buscar{
+	border-radius: 10px;
+	border-color:  black;
+}
+#reset{
+	border-radius: 10px;
+	border-color:  black;
+}
+#div{
+	
+	margin: auto 0px;
+}

@@ -4,6 +4,7 @@
 	xmlns:with="http://www.thymeleaf.org/extras/with" with:title="'Hola'">
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" th:href="@{/estilo.css}">
 <title>Datos estadísticos</title>
 </head>
 <body>
@@ -27,11 +28,16 @@
 		</tr>
 	</tbody>
 </table>
-
-
-
-
+<p>
 <a th:href="@{/}" href="index.html">Menú principal</a>
+<p>
+<div id="map"></div>
+<script src="/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+
+
+
+
 
 </body>
 </html>

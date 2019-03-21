@@ -17,13 +17,15 @@ and contains over eleven million placenames that are available for download free
 
 
 <form action="/pruebas" method="post">
-		<input type="text" name="ciudad" />
-		<input type="submit" value="Buscar" />
+		<input type="text" name="ciudad" placeholder=" Buscar una ciudad" id="ciudad"/>
+		<input type="submit" value="Buscar" id="buscar" />
+		<input type="reset" id="reset">
 	</form>
 	<p>
-<div id="map"></div>
-<script src="/script.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+	<div id="div"><ul >
+		<li th:each="busqueda : ${historial}"><span th:text="${busqueda}"></span></li>
+	</ul></div>
+	
 
 </body>
 </html>
