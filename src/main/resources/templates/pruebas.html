@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:with="http://www.thymeleaf.org/extras/with" with:title="'Hola'">
+<head>
+<meta charset="UTF-8">
+<title>Pruebas</title>
+</head>
+<body>
+
+
+	<h2>Datos de las estaciones meteorológicas</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Longitud</th>
+				<th>Latitud</th>
+				<th>Temperatura</th>
+			</tr>
+		</thead>
+		<tbody th:each="station : ${stations}">
+			<tr>
+				<th th:text="${station.stationName}"></th>
+				<th th:text="${station.lng}"></th>
+				<th th:text="${station.lat}"></th>
+				<th th:text="${station.temperature}"></th>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>
+		Datos de los geonames de <span th:text="${ciudad}"></span>
+	</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Norte</th>
+				<th>Sur</th>
+				<th>Este</th>
+				<th>Oeste</th>
+			</tr>
+		</thead>
+		<tbody th:each="geoname : ${geonames}">
+			<tr>
+				<th th:text="${geoname.asciiName}"></th>
+				<th th:text="${geoname.bbox.north}"></th>
+				<th th:text="${geoname.bbox.south}"></th>
+				<th th:text="${geoname.bbox.east}"></th>
+				<th th:text="${geoname.bbox.west}"></th>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<form action="/pruebas" method="post">
+		<input type="text" name="ciudad" />
+		<input type="submit" value="Buscar" />
+	</form>
+
+</body>
+</html>
