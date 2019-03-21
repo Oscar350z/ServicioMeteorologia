@@ -11,7 +11,7 @@ public class GeonamesRepositoryImpl implements GeonamesRepository{
 
 	public TotalResults getAll(String nombreCiudad) {
 		RestTemplate restTemplate = new RestTemplate();
-		String fooResourceUrl = "http://api.geonames.org/searchJSON?q="+nombreCiudad+"&maxRows=20&startRow=0&lang=en&isNameRequired =true&style=FULL&username=ilgeonamessample";
+		String fooResourceUrl = "http://api.geonames.org/searchJSON?q="+nombreCiudad+"&maxRows=20&startRow=0&lang=en&isNameRequired=true&style=FULL&username=ilgeonamessample";
 		
 		TotalResults geoname = restTemplate.getForObject(fooResourceUrl, TotalResults.class);	
 			

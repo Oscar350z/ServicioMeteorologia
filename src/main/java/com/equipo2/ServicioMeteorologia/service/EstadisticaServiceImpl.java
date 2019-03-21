@@ -45,6 +45,7 @@ public class EstadisticaServiceImpl implements EstadisticasService {
 		}catch(Exception e){
 			e.getMessage();
 			System.out.println("No existen estaciones");
+//			throw new Exception("");
 		}
 		
 		

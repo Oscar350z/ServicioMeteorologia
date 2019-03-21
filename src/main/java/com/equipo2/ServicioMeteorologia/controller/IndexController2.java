@@ -29,22 +29,15 @@ public class IndexController2 {
 	public String index(Model model) {
 		
 		
-//		Geonames g = geonameService.getAll("Madrid");
-		
 		Bbox bbox = new Bbox(44.1f, -9.9f, -22.4f, 55.2f);
 		
 		System.out.println("Antes de recuperar lista de observaciones");
 		
-		TotalWeatherObservations w = weatherService.findAll(bbox);
-		String nombreCiudad = "Madrid";
-		TotalResults t = geonameService.getAll(nombreCiudad);
+		
+	
 		MeteoData meteodata = estadisticasService.calculaMedia("Madrid");
 		
-		System.out.println("Número de geonames: " + t.getGeonames().size());
 		
-		model.addAttribute("stations", w.getWeatherObservations());
-		model.addAttribute("ciudad", nombreCiudad);
-		model.addAttribute("geonames", t.getGeonames());
 		model.addAttribute("meteodata", meteodata);
 		
 		return "pruebas";
