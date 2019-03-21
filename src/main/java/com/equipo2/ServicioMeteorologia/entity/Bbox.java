@@ -1,8 +1,10 @@
 package com.equipo2.ServicioMeteorologia.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Bbox {
 
-	
 	private float east;
 	private float south;
 	private float north;

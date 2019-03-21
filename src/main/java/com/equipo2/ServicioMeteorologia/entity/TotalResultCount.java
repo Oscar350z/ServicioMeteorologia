@@ -2,6 +2,9 @@ package com.equipo2.ServicioMeteorologia.entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class TotalResultCount {
 
 	

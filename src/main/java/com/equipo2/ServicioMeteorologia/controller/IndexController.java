@@ -18,9 +18,9 @@ public class IndexController {
 	public String index(Model model) {
 		
 		
-		Geonames g = geonameService.getAll("Madrid");
-		
-		model.addAttribute("estacion", g.getAsciiName());
+//		Geonames g = geonameService.getAll("Madrid");
+//		
+//		model.addAttribute("estacion", g.getAsciiName());
 		return "index";
 	}
 	

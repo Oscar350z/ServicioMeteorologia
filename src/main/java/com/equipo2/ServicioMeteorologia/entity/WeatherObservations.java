@@ -1,35 +1,43 @@
 package com.equipo2.ServicioMeteorologia.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class WeatherObservations {
 
-	
-	private long lng;
-	private long lat;
+	private float lng;
+	private float lat;
 	private String stationName;
-	private long temperature;
+	private double temperature;
 	private int humidity;
+	private String windSpeed;
 	
-	public WeatherObservations(long lng, long lat, String stationName, long temperature, int humidity) {
+	public WeatherObservations() {
+	}
+
+	public WeatherObservations(float lng, float lat, String stationName, double temperature, int humidity,
+			String windSpeed) {
 		this.lng = lng;
 		this.lat = lat;
 		this.stationName = stationName;
 		this.temperature = temperature;
 		this.humidity = humidity;
+		this.windSpeed = windSpeed;
 	}
 
-	public long getLng() {
+	public float getLng() {
 		return lng;
 	}
 
-	public void setLng(long lng) {
+	public void setLng(float lng) {
 		this.lng = lng;
 	}
 
-	public long getLat() {
+	public float getLat() {
 		return lat;
 	}
 
-	public void setLat(long lat) {
+	public void setLat(float lat) {
 		this.lat = lat;
 	}
 
@@ -41,11 +49,11 @@ public class WeatherObservations {
 		this.stationName = stationName;
 	}
 
-	public long getTemperature() {
+	public double getTemperature() {
 		return temperature;
 	}
 
-	public void setTemperature(long temperature) {
+	public void setTemperature(double temperature) {
 		this.temperature = temperature;
 	}
 
@@ -56,9 +64,13 @@ public class WeatherObservations {
 	public void setHumidity(int humidity) {
 		this.humidity = humidity;
 	}
-	
-	
-	
-	
+
+	public String getWindSpeed() {
+		return windSpeed;
+	}
+
+	public void setWindSpeed(String windSpeed) {
+		this.windSpeed = windSpeed;
+	}
 	
 }

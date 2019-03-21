@@ -1,10 +1,10 @@
 package com.equipo2.ServicioMeteorologia.service;
 
-import com.equipo2.ServicioMeteorologia.entity.Geonames;
+import com.equipo2.ServicioMeteorologia.entity.TotalResults;
 
 
 public interface GeonamesService {
 
-	public Geonames getAll(String nombreCiudad);
+	public TotalResults getAll(String nombreCiudad);
 	
 }
