@@ -5,11 +5,25 @@
       with:title="'Hola'">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Maps</title>
+<link rel="stylesheet" type="text/css" th:href="@{/estilo.css}">
 </head>
-<body>
-<h1 th:text="estacion"></h1>
-Hola mundo
+<body id="body">
+
+<p id="geoname"><b>GeoNames</b></p>
+
+The GeoNames geographical database covers all countries<br> 
+and contains over eleven million placenames that are available for download free of charge.<p>
+
+
+<form action="/pruebas" method="post">
+		<input type="text" name="ciudad" />
+		<input type="submit" value="Buscar" />
+	</form>
+	<p>
+<div id="map"></div>
+<script src="/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 
 </body>
 </html>
