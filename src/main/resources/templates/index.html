@@ -22,10 +22,21 @@ and contains over eleven million placenames that are available for download free
 		<input type="reset" id="reset">
 	</form>
 	<p>
-	<div id="div"><ul >
-		<li th:each="busqueda : ${historial}"><span th:text="${busqueda}"></span></li>
-	</ul></div>
+	<br>
+	<div ><table id="tabla">
+	<thead  >
+		<tr id="tituloTabla">
+			<th scope="col">Historial de búsqueda</th>
+		</tr>
+	</thead>
+	<tbody id="tbody">
+	<tr th:each="busqueda : ${historial}">
+		<th scope="row">
+			<span id="th" th:text="${busqueda}"></span>
+	</tbody>
+	</table>
 	
+	</div>
 
 </body>
 </html>
