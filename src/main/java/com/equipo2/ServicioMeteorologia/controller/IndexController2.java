@@ -48,9 +48,7 @@ public class IndexController2 {
 		
 		MeteoData meteodata = estadisticasService.calculaMedia(ciudad);
 		model.addAttribute("meteodata", meteodata);
-		//historial.add(ciudad);
-		//model.addAttribute("listaCiudades", ciudad);
-		
+
 		if(!historial.contains(ciudad)) {
 			historial.add(ciudad);
 		}

@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns:with="http://www.thymeleaf.org/extras/with"
-      with:title="'Hola'">
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:with="http://www.thymeleaf.org/extras/with" with:title="'Hola'">
 <head>
 <meta charset="UTF-8">
 <title>Maps</title>
 <link rel="stylesheet" type="text/css" th:href="@{/estilo.css}">
 </head>
+
 <body id="body">
 
-<p id="geoname"><b>GeoNames</b></p>
+<!-- 	<th:block layout:insert="~{fragments/navigation}" /> -->
 
-The GeoNames geographical database covers all countries<br> 
-and contains over eleven million placenames that are available for download free of charge.<p>
+	<ul class="navbar-nav navbar-right mx-4">
+		<li class="nav-item mx-1"><a class="btn btn-outline-success"
+			href="?lang=es_ES">ES</a></li>
+		<li class="nav-item mx-1"><a class="btn btn-outline-success"
+			href="?lang=en_US">EN</a></li>
+	</ul>
 
+	<p id="geoname">
+		<b>GeoNames</b>
+	</p>
 
 <form action="/pruebas" method="post">
 		<input type="text" name="ciudad" placeholder=" Buscar una ciudad" id="ciudad"/>
 		<input type="submit" th:value="#{text.index.buscar}" id="buscar" />
 		<input type="reset" id="reset">
-	</form>
+	<p th:text="#{text.index.buscar}"></p>
+
+
 	<p>
-	<br>
+	
+<br>
 	<div ><table id="tabla">
 	<thead  >
 		<tr id="tituloTabla">
@@ -34,9 +44,11 @@ and contains over eleven million placenames that are available for download free
 		<th scope="row">
 			<span id="th" th:text="${busqueda}"></span>
 	</tbody>
-	</table>
-	
+	</table></div>
+
 	</div>
+
+
 
 </body>
 </html>

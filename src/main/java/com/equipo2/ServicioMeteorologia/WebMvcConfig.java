@@ -1,3 +1,8 @@
+
+
+
+
+
 package com.equipo2.ServicioMeteorologia;
 
 import java.util.Locale;
@@ -33,3 +38,7 @@ public class WebMvcConfig implements WebMvcConfigurer{
 			registry.addInterceptor(localeChangeInterceptor());
 		}
 }
+
+
+
+

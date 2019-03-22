@@ -8,9 +8,9 @@
 <title>Datos estadísticos</title>
 </head>
 <body id="body">
-<p id="geoname"><b>GeoNames</b></p>
 <table id="tabla">
-	<thead>
+<thead>
+		
 		<tr id="tituloTabla">
 			<th>Nombre</th>
 			<th>Temperatura media</th>
@@ -29,10 +29,13 @@
 	</tbody>
 </table>
 <p>
+
 <a id="menuPrincipal" th:href="@{/}" href="index.html">Menú principal</a>
 <p>
 <br>
 <div id="map"></div>
+
+
 <script th:inline="javascript">
 /*<![CDATA[*/var results = /*[[${meteodata}]]*/;
 
@@ -44,7 +47,7 @@ function iniciarMap(){
 
 	console.log("results: " + results.ciudad);
     
-    var coord = {lat: results.lat, lng: results.lng};
+    var coord = {lat: 40.4165, lng: -3.70256};
 	
     console.log("Pintar results: ");
 	var map = new google.maps.Map(document.getElementById('map'),{
@@ -67,15 +70,15 @@ function iniciarMap(){
           title: title
         });
       }
+	
 }
+
+
+
 </script>
 
-<!-- <script src="/script.js"></script> -->
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
-
-
-
-
 
 </body>
 </html>

@@ -47,7 +47,6 @@ public class EstadisticaServiceImpl implements EstadisticasService {
 //			throw new Exception("");
 		}
 		
-		
 		meteoData.setCiudad(nombreCiudad);
 		meteoData.setLat(Float.parseFloat(geoname.getLat()));
 		meteoData.setLng(Float.parseFloat(geoname.getLng()));
