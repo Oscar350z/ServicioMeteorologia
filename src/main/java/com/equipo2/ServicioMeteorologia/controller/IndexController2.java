@@ -33,11 +33,11 @@ public class IndexController2 {
 	public String index(Model model) {
 		
 		
-		model.addAttribute("historial", historial);
+		model.addAttribute("historial", historial); 	
 		
-		if(model.equals("historial")){
-			model.addAttribute("", historial);
-		}
+//		if(model.equals("historial")){
+//			model.addAttribute("", historial);
+//		}
 //		model.containsAttribute("historial");
 		
 		return "index";
@@ -48,9 +48,12 @@ public class IndexController2 {
 		
 		MeteoData meteodata = estadisticasService.calculaMedia(ciudad);
 		model.addAttribute("meteodata", meteodata);
-		historial.add(ciudad);
-		model.addAttribute("listaCiudades", ciudad);
+		//historial.add(ciudad);
+		//model.addAttribute("listaCiudades", ciudad);
 		
+		if(!historial.contains(ciudad)) {
+			historial.add(ciudad);
+		}
 		return "resultados";
 	}
 

@@ -27,8 +27,8 @@ public class EstadisticaServiceImpl implements EstadisticasService {
 		double windSpeed = 0;
 		double windSpeedAverage = 0;
 		
-		Geonames geonames = geonameService.getFirstGeonames(nombreCiudad);
-		TotalWeatherObservations observations = weatherService.findAll(geonames.getBbox());
+		Geonames geoname = geonameService.getFirstGeonames(nombreCiudad);
+		TotalWeatherObservations observations = weatherService.findAll(geoname.getBbox());
 		
 		for(WeatherObservations observation : observations.getWeatherObservations()) {
 			temperature = temperature + observation.getTemperature();
@@ -49,10 +49,13 @@ public class EstadisticaServiceImpl implements EstadisticasService {
 		
 		
 		meteoData.setCiudad(nombreCiudad);
+		meteoData.setLat(Float.parseFloat(geoname.getLat()));
+		meteoData.setLng(Float.parseFloat(geoname.getLng()));
 		meteoData.setMediaTemperatura(temperatureAverage);
 		meteoData.setMediaHumedad(humidityAverage);
 		meteoData.setMediaVelocidadViento(windSpeedAverage);
 		meteoData.setListaEstaciones(observations.getWeatherObservations());
+		
 		
 		return meteoData;
 	}

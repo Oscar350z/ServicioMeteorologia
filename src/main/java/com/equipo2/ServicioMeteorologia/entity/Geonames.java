@@ -7,15 +7,20 @@ public class Geonames {
 
 	private String asciiName;
 	private Bbox bbox;
+	private String lat;
+	private String lng;
 	
 	public Geonames() {
 	}
-
-	public Geonames(String asciiName, Bbox bbox) {
+	
+	public Geonames(String asciiName, Bbox bbox, String lat, String lng) {
+		super();
 		this.asciiName = asciiName;
 		this.bbox = bbox;
+		this.lat = lat;
+		this.lng = lng;
 	}
-	
+
 	public String getAsciiName() {
 		return asciiName;
 	}
@@ -28,9 +33,22 @@ public class Geonames {
 	public void setBbox(Bbox bbox) {
 		this.bbox = bbox;
 	}
-	
-	
-	
-	
+
+	public String getLat() {
+		return lat;
+	}
+
+	public void setLat(String lat) {
+		this.lat = lat;
+	}
+
+	public String getLng() {
+		return lng;
+	}
+
+	public void setLng(String lng) {
+		this.lng = lng;
+	}
 	
 }
+
