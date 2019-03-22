@@ -32,7 +32,13 @@ public class IndexController2 {
 	@GetMapping ("/")
 	public String index(Model model) {
 		
+		
 		model.addAttribute("historial", historial);
+		
+		if(model.equals("historial")){
+			model.addAttribute("", historial);
+		}
+//		model.containsAttribute("historial");
 		
 		return "index";
 	}

@@ -10,7 +10,7 @@
 
 <body id="body">
 
-	<th:block layout:insert="~{fragments/navigation}" />
+<!-- 	<th:block layout:insert="~{fragments/navigation}" /> -->
 
 	<ul class="navbar-nav navbar-right mx-4">
 		<li class="nav-item mx-1"><a class="btn btn-outline-success"
@@ -36,19 +36,20 @@
 
 
 	<p>
-		<br>
-	<div>
-		<table id="tabla">
-			<thead>
-				<tr id="tituloTabla">
-					<th scope="col">Historial de búsqueda</th>
-				</tr>
-			</thead>
-			<tbody id="tbody">
-				<tr th:each="busqueda : ${historial}">
-					<th scope="row"><span id="th" th:text="${busqueda}"></span>
-			</tbody>
-		</table>
+	
+<br>
+	<div ><table id="tabla">
+	<thead  >
+		<tr id="tituloTabla">
+			<th scope="col">Historial de búsqueda</th>
+		</tr>
+	</thead>
+	<tbody id="tbody">
+	<tr th:each="busqueda : ${historial}">
+		<th scope="row">
+			<span id="th" th:text="${busqueda}"></span>
+	</tbody>
+	</table></div>
 
 	</div>
 
