@@ -1,15 +1,17 @@
 #map{
 	height: 500px;
 	width: 100%;
-	border:3px solid green;
+	border:3px solid black;
 }
 #body{
-	background-color: white;
+	/*#64CC44 color verde*/
+	background-color: #9999ff;
 	text-align: center;
+	font-family: Arial;
 }
 #geoname{
-	color: #363;
-	font-size: 25px;
+	color: #008000;
+	font-size: 27px;
 }
 #ciudad{
 	border-radius: 10px;
@@ -24,6 +26,40 @@
 	border-color:  black;
 }
 #div{
-	
 	margin: auto 0px;
+	
+}
+#li{
+	list-style-position: inside;
+}
+#tabla{
+	margin: auto;
+	height: 100px;
+	width: 30%;
+	border: 3px solid #E1C699;
+	border-collapse: collapse;
+	background-color: white;
+	font-family: Arial;
+	border-radius: 7px;
+}
+#tituloTabla{
+	background-color: #E1C699;
+	color: white;
+	
+	
+	font-size: 18px;
+	padding: 50px;
+}
+#tbody{
+	padding: 50px;
+	font-family: Arial;
+	
+}
+#th{
+	padding: 10px;
+	font-size: 16px;
+}
+#menuPrincipal{
+	text-decoration: none;
+	color: black;
 }

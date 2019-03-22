@@ -1,0 +1,23 @@
+
+
+<nav class="navbar navbar-default" xmlns:th="http://www.thymeleaf.org">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Navegacion</span>
+        <span class="icon-bar" aria-hidden="true"></span>
+        <span class="icon-bar" aria-hidden="true"></span>
+        <span class="icon-bar" aria-hidden="true"></span>
+      </button>
+      <a class="navbar-brand" th:href="@{/}">
+        Inicio
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="navbar-nav navbar-right mx-4">
+        <li class="nav-item mx-1"><a class="btn btn-outline-success" href="?lang=es_ES">ES</a></li>
+        <li class="nav-item mx-1"><a class="btn btn-outline-success" href="?lang=en_US">EN</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

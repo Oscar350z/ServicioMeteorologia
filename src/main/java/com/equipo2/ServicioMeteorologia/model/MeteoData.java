@@ -7,6 +7,8 @@ import com.equipo2.ServicioMeteorologia.entity.WeatherObservations;
 public class MeteoData {
 	
 	private String ciudad;
+	private float lat;
+	private float lng;
 	private double mediaTemperatura;
 	private int mediaHumedad;
 	private double mediaVelocidadViento;
@@ -15,9 +17,11 @@ public class MeteoData {
 	public MeteoData() {
 	}
 
-	public MeteoData(String ciudad, double mediaTemperatura, int mediaHumedad, double mediaVelocidadViento,
-			List<WeatherObservations> listaEstaciones) {
+	public MeteoData(String ciudad, float lat, float lng, double mediaTemperatura, int mediaHumedad,
+			double mediaVelocidadViento, List<WeatherObservations> listaEstaciones) {
 		this.ciudad = ciudad;
+		this.lat = lat;
+		this.lng = lng;
 		this.mediaTemperatura = mediaTemperatura;
 		this.mediaHumedad = mediaHumedad;
 		this.mediaVelocidadViento = mediaVelocidadViento;
@@ -30,6 +34,22 @@ public class MeteoData {
 
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
+	}
+
+	public float getLat() {
+		return lat;
+	}
+
+	public void setLat(float lat) {
+		this.lat = lat;
+	}
+
+	public float getLng() {
+		return lng;
+	}
+
+	public void setLng(float lng) {
+		this.lng = lng;
 	}
 
 	public double getMediaTemperatura() {
